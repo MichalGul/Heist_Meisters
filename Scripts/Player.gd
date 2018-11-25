@@ -12,8 +12,15 @@ func _ready():
 	pass
 
 func _process(delta):
+#	if is_colliding():
+#		if get_collider().is_in_group("Walls"):
+#    	print("Player has died")
 	update_motion(delta)
-	move_and_slide(motion)
+	var collision_info = move_and_collide(motion)
+	if collision_info:
+		if collision_info.get_collider().is_in_group("Walls"):
+			print("DEATH")
+
 	
 func update_motion(delta):
 	
