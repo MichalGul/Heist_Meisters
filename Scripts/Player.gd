@@ -4,7 +4,7 @@ extends "res://Scripts/Character.gd"
 # var a = 2
 # var b = "textvar"
 var motion = Vector2()
-
+var torch_on = true
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -16,11 +16,16 @@ func _process(delta):
 #		if get_collider().is_in_group("Walls"):
 #    	print("Player has died")
 	update_motion(delta)
-	var collision_info = move_and_collide(motion)
-	if collision_info:
-		if collision_info.get_collider().is_in_group("Walls"):
-			print("DEATH")
+	move_and_slide(motion)
 
+
+#func _input(event):
+#	if Input.is_action_just_pressed("turn_torch"):
+#		toggle_torch()
+#
+#func toggle_torch():
+#	torch_on = !torch_on
+#	$Torch.enabled = torch_on
 	
 func update_motion(delta):
 	
