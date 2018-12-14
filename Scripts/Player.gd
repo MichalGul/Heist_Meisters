@@ -7,9 +7,7 @@ var motion = Vector2()
 var torch_on = true
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	Global.Player = self
 
 func _process(delta):
 #	if is_colliding():
