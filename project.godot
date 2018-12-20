@@ -10,8 +10,8 @@ config_version=3
 
 [application]
 
-config/name="HeistMeisters"
-run/main_scene="res://Scenes/Level1.tscn"
+config/name="3_Heist_Meisters"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -36,17 +36,16 @@ ui_down=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
-turn_torch=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"unicode":0,"echo":false,"script":null)
+ui_vision_mode_change=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 
 [layer_names]
 
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Walls"
+2d_physics/layer_2="Terrain"
 2d_physics/layer_3="SecurityCameras"
-2d_physics/layer_4="Guard"
+2d_physics/layer_4="Guards"
 
 [rendering]
 
-environment/default_clear_color=Color( 0.0742188, 0.0727692, 0.0727692, 1 )
-environment/default_environment="res://default_env.tres"
+environment/default_clear_color=Color( 0, 0, 0, 1 )

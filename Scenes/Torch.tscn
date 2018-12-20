@@ -4,7 +4,6 @@
 
 [node name="Torch" type="Light2D"]
 
-position = Vector2( 5, 0 )
 enabled = true
 editor_only = false
 texture = ExtResource( 1 )
@@ -26,6 +25,6 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-_sections_unfolded = [ "Shadow", "Transform" ]
+_sections_unfolded = [ "Shadow" ]
 
 

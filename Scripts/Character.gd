@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-#constant in every inheriter scene
-const SPEED = 30
-const MAX_SPEED = 300
-const FRICTION =  0.1
-
+const SPEED = 10
+const MAX_SPEED = 200
+const FRICTION = 0.1

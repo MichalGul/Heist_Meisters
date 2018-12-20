@@ -6,23 +6,22 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 11.1626
-height = 23.4761
+radius = 9.92417
+height = 25.6485
 
 [sub_resource type="OccluderPolygon2D" id=2]
 
 closed = true
 cull_mode = 1
-polygon = PoolVector2Array( -9.32, 8.22158, -9.66722, -0.250444, -6.874, -20.6153, 3.28048, -19.3938, 4.95114, -6.92817, 5.72221, 5.02346, 5.97367, 16.0383, 2.00601, 21.0452, -5.26804, 20.2894, -9.61358, 15.9439 )
+polygon = PoolVector2Array( -11.9748, -8.88934, -9.88136, -18.31, -6.21775, -22.6017, 1.00478, -23.0204, 6.2385, -18.4147, 8.12264, -9.62206, 9.48341, -0.724737, 7.38992, 11.2081, 3.41229, 19.4774, -7.57852, 19.0587, -11.3468, 13.6157, -11.6608, 5.2417 )
 
 [node name="Character" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 2
+collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -34,11 +33,12 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 visible = false
-position = Vector2( -1.42696, 0.237823 )
+position = Vector2( -1.77946, 0.209347 )
 shape = SubResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." index="2"]
 
+position = Vector2( 0, 1.6748 )
 occluder = SubResource( 2 )
 light_mask = 1
 

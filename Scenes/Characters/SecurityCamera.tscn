@@ -4,30 +4,42 @@
 [ext_resource path="res://Scripts/PlayerDetection.gd" type="Script" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Characters/SecurityCamera.tres" type="Animation" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="SecurityCamera" type="Node2D"]
+[sub_resource type="Animation" id=2]
 
-__meta__ = {
-"_edit_group_": true
+resource_name = "SecurityCameraScan"
+length = 12.0
+loop = true
+step = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -30.0, -30.0, 30.0, 30.0 ]
 }
+
+[node name="SecurityCamera" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 2.00284, 0 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( -5, 0 )
+scale = Vector2( 0.3, 0.5 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CameraBody" type="KinematicBody2D" parent="." index="1"]
 
-position = Vector2( -3.62892, 0.15778 )
-rotation = 0.523599
 input_pickable = false
 collision_layer = 4
 collision_mask = 3
@@ -37,7 +49,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="CameraBody" index="0"]
 
-position = Vector2( 17.2414, -0.428383 )
+position = Vector2( 8.32962, -0.193718 )
 rotation = 1.5708
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
@@ -45,11 +57,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Torch" parent="CameraBody" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 0.428987, 0.231933 )
+_sections_unfolded = [ "Shadow", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBody" index="2"]
 
-position = Vector2( 5.42392, -0.387424 )
 shape = SubResource( 1 )
 disabled = true
 
@@ -60,7 +71,7 @@ autoplay = "SecurityCameraScan"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/SecurityCameraScan = ExtResource( 5 )
+anims/SecurityCameraScan = SubResource( 2 )
 blend_times = [  ]
 
 
