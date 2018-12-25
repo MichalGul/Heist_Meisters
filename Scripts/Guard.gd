@@ -14,7 +14,7 @@ onready var available_destinations = Global.destinations
 func _ready():
 	possible_destinations = available_destinations.get_children()
 	make_path()
-
+	
 
 func _process(delta):
 	navigate()

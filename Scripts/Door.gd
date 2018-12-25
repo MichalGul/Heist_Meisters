@@ -5,6 +5,7 @@ var can_click = false
 
 func _on_Door_body_entered(body):
 	if not body == Global.Player and not $AnimationPlayer.is_playing():
+		print("Opening doors:" + body.name)
 		open()
 	else:
 		can_click = true
