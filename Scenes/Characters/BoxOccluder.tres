@@ -1,0 +1,8 @@
+[gd_resource type="OccluderPolygon2D" format=2]
+
+[resource]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -24.8521, -28.116, 25.3193, -27.3412, 25.513, 23.9924, -23.8835, 23.7987 )
+

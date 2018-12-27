@@ -1,13 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/LockedDoor.gd" type="Script" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/NumberPad.tscn" type="PackedScene" id=4]
+[ext_resource path="res://new_theme.tres" type="Theme" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.0887, 13.7502 )
 
 [node name="LockedDoor" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+
+[node name="PlayerDetectionArea" parent="." index="0"]
+
+visible = false
 
 [node name="Sprite" parent="." index="3"]
 
@@ -28,8 +38,52 @@ visible = false
 margin_right = 300.0
 margin_bottom = 400.0
 
+[node name="ExitDetection" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDetection" index="0"]
+
+position = Vector2( -0.323532, -21.3533 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="." index="6" groups=[
+"label",
+]]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -32.0
+margin_right = 108.0
+margin_bottom = 13.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 5 )
+text = "Test"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
 [connection signal="body_exited" from="." to="." method="_on_LockedDoor_body_exited"]
 
 [connection signal="combination_correct" from="CanvasLayer/NumberPad" to="." method="_on_NumberPad_combination_correct"]
+
+[connection signal="body_entered" from="ExitDetection" to="." method="_on_ExitDetection_body_entered"]
 
 
