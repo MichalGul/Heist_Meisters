@@ -5,6 +5,9 @@ var navigation
 var destinations
 
 
+# File links - MUST BE CHANGED MANUALLY
+var tutorial_messages = "res://Jsons/TutorialMessages.json"
+
 
 
 # Asset Links - MUST BE CHANGED MANUALLY
@@ -19,3 +22,7 @@ var player_sprite = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
 
 var box_occluder = "res://Scenes/Characters/BoxOccluder.tres"
 var player_occluder = "res://Scenes/Characters/CharacterOccluder.tres"
+
+var briefcase_sprite = "res://GFX/Loot/suitcase.png"
+var folder_sprite = "res://GFX/Loot/folder.png"
+

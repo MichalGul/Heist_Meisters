@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Destination.gd" type="Script" id=2]
@@ -9,12 +9,15 @@
 [ext_resource path="res://Tilesets/AutoTileWalls.tres" type="TileSet" id=7]
 [ext_resource path="res://Tilesets/Furniture.tres" type="TileSet" id=8]
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scripts/VisionMode.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/VisionMode.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=13]
 [ext_resource path="res://new_theme.tres" type="Theme" id=14]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Briefcase.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Folder.tscn" type="PackedScene" id=18]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -22,7 +25,7 @@ vertices = PoolVector2Array( 1797.67, -3.9891, 1605.94, -4.65251, 1402.27, -5.97
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 1, 0, 6 ), PoolIntArray( 7, 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15, 16 ), PoolIntArray( 8, 7, 0, 17 ), PoolIntArray( 18, 19, 20, 21 ), PoolIntArray( 22, 23, 24, 25 ), PoolIntArray( 26, 24, 23, 27 ), PoolIntArray( 28, 29, 30, 31, 32 ), PoolIntArray( 33, 34, 18, 21, 35 ), PoolIntArray( 36, 37, 38, 39, 40 ), PoolIntArray( 41, 42, 43, 44 ), PoolIntArray( 45, 46, 47, 48, 49, 50 ), PoolIntArray( 51, 52, 53, 54, 55 ), PoolIntArray( 56, 57, 17, 0 ), PoolIntArray( 58, 59, 60, 61, 62 ), PoolIntArray( 63, 64, 65, 66 ), PoolIntArray( 67, 68, 69, 30 ), PoolIntArray( 50, 70, 71, 72, 45 ), PoolIntArray( 14, 73, 74, 75, 15 ), PoolIntArray( 76, 77, 40, 39 ), PoolIntArray( 78, 79, 56, 80 ), PoolIntArray( 80, 56, 0, 5 ), PoolIntArray( 4, 3, 42 ), PoolIntArray( 71, 4, 42, 41, 72 ), PoolIntArray( 40, 81, 36 ), PoolIntArray( 55, 76, 39, 82, 51 ), PoolIntArray( 83, 84, 85, 86, 75, 74 ), PoolIntArray( 33, 1, 6, 34 ), PoolIntArray( 10, 87, 11 ), PoolIntArray( 7, 11, 88, 19 ), PoolIntArray( 89, 90, 66, 91 ), PoolIntArray( 92, 3, 2, 93 ), PoolIntArray( 25, 94, 95, 22 ), PoolIntArray( 93, 96, 97, 22, 92 ), PoolIntArray( 35, 98, 33 ), PoolIntArray( 35, 21, 22, 97 ), PoolIntArray( 99, 92, 22, 95 ), PoolIntArray( 25, 24, 12, 43 ), PoolIntArray( 44, 43, 12, 16, 86 ), PoolIntArray( 44, 86, 85, 46, 45 ), PoolIntArray( 65, 50, 49, 28 ), PoolIntArray( 66, 65, 28, 100 ), PoolIntArray( 61, 101, 62 ), PoolIntArray( 58, 62, 89, 69 ), PoolIntArray( 30, 69, 89, 91, 31 ), PoolIntArray( 20, 19, 88, 27, 23 ), PoolIntArray( 26, 27, 14, 13 ), PoolIntArray( 102, 103, 104, 105, 106 ), PoolIntArray( 102, 107, 55, 54, 103 ), PoolIntArray( 74, 106, 105, 83 ), PoolIntArray( 48, 47, 84, 108 ), PoolIntArray( 28, 32, 100 ), PoolIntArray( 66, 100, 91 ), PoolIntArray( 109, 30, 29, 48 ), PoolIntArray( 108, 109, 48 ), PoolIntArray( 83, 108, 84 ) ]
 outlines = [ PoolVector2Array( 130.177, 581.92, 128.706, 1084.72, 254.407, 1086.19, 249.997, 817.149, 329.386, 823.03, 328.651, 1079.58, 628.569, 1076.64, 630.039, 697.329, 823.368, 694.389, 825.573, 562.807, 961.565, 565.013, 966.081, 646.354, 905.047, 652.325, 906.014, 899.72, 1168.73, 901.711, 1164.08, 1078.84, 1268.9, 1078.18, 1269.26, 879.878, 1352.86, 881.205, 1461.96, 881.808, 1457.98, 955.447, 1598.62, 948.15, 1595.97, 649.611, 1538.92, 651.601, 1540.91, 704.012, 1355.15, 702.685, 1354.85, 844.717, 1267.94, 843.39, 1261.89, 783.977, 1017.75, 778.006, 1017.09, 651.957, 1013.85, 562.1, 1139.9, 562.763, 1139.9, 501.065, 1229.46, 500.402, 1718.41, 499.707, 1804.63, 500.904, 1803.98, 745.867, 2028.88, 748.521, 2026.23, 398.898, 1848.43, 392.264, 1851.08, 306.683, 1922.97, 306.877, 1917.83, 126.197, 2097.92, 127.667, 2098.34, 5.6386, 1991.34, 4.90707, 1986.92, -54.8812, 780.324, -54.8812, 780.987, 75.8127, 715.972, 74.4858, 713.982, 266.878, 624.42, 268.868, 626.41, 77.1395, 384.925, 79.1297, 390.896, 514.333, 324.554, 515.66, 326.544, 780.365, 246.27, 771.741, 241.626, 583.993 ), PoolVector2Array( 1222, 198, 1222.39, 122.602, 1286.46, 121.404, 1290.07, 72.536, 1349, 73, 1352, -7, 1137, -6, 1142, 196 ), PoolVector2Array( 1402.27, -5.97935, 1605.94, -4.65251, 1604.61, 68.9871, 1538.53, 70.5117, 1537.93, 121.404, 1468.47, 120.207, 1468.47, 69.913, 1403.59, 68.3237 ), PoolVector2Array( 1656.36, -3.9891, 1797.67, -3.9891, 1797.67, 452.444, 1721.37, 451.781, 1719.38, 70.314, 1658.35, 66.9969 ), PoolVector2Array( 1284.98, 185.538, 1661.14, 186.865, 1663.13, 393.188, 1283.65, 388.544 ), PoolVector2Array( 1145.52, 249.437, 1221.82, 248.774, 1220.49, 458.415, 1146.85, 458.415 ), PoolVector2Array( 1019.47, 312.462, 1091.79, 312.462, 1092.45, 391.409, 1018.15, 389.419 ), PoolVector2Array( 827.745, 314.453, 902.711, 315.116, 903.374, 390.083, 825.091, 387.429 ), PoolVector2Array( 830.398, 187.739, 898.73, 187.739, 898.067, 264.033, 825.754, 264.033 ), PoolVector2Array( 635.353, 316.443, 710.319, 315.779, 709.656, 644.173, 633.362, 644.836 ), PoolVector2Array( 444.951, 506.181, 517.264, 507.508, 518.591, 583.801, 444.951, 581.811 ) ]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="0"]
 
@@ -113,7 +116,6 @@ tile_data = PoolIntArray( -131061, 1, 0, -131060, 1, 0, -131059, 1, 0, -131058, 
 
 [node name="Player" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 position = Vector2( 104.781, 260.56 )
 collision_mask = 1
 disguises = 5
@@ -142,13 +144,6 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-
-[node name="VisionModeTimer" type="Timer" parent="Player" index="5"]
-
-process_mode = 1
-wait_time = 3.0
-one_shot = false
-autostart = false
 
 [node name="SecurityCameras" type="Node2D" parent="." index="3"]
 
@@ -203,6 +198,16 @@ position = Vector2( 1309.69, 865.53 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
+[node name="LockedDoor4" parent="LockedDoors" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 1820, 350 )
+rotation = 3.13246
+
+[node name="LockedDoor5" parent="LockedDoors" index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 1760, 480 )
+rotation = 1.56558
+
 [node name="Walls" type="TileMap" parent="." index="5"]
 
 mode = 0
@@ -247,29 +252,15 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Doors" type="Node2D" parent="." index="7"]
 
+editor/display_folded = true
+
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 287.27, 800.994 )
 rotation = -1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="VisionMode" type="CanvasModulate" parent="." index="8" groups=[
-"interface",
-]]
-
-editor/display_folded = true
-visible = false
-color = Color( 0.0602417, 0.114655, 0.328125, 1 )
-script = ExtResource( 10 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VisionMode" index="0"]
-
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
+[node name="VisionMode" parent="." index="8" instance=ExtResource( 10 )]
 
 [node name="Guards" type="Node2D" parent="." index="9"]
 
@@ -290,7 +281,7 @@ rotation = -4.68578
 
 [node name="Guard4" parent="Guards" index="3" instance=ExtResource( 11 )]
 
-position = Vector2( 1521.55, 781.936 )
+position = Vector2( 1511.53, 773.481 )
 rotation = -3.33341
 
 [node name="CombinationGenerator" parent="." index="10" instance=ExtResource( 12 )]
@@ -301,7 +292,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Computer" parent="Computers" index="0" instance=ExtResource( 13 )]
 
-position = Vector2( 478.861, 865.564 )
+position = Vector2( 480.188, 861.197 )
 rotation = 1.56312
 combination_length = 3
 lock_group = "1"
@@ -312,6 +303,11 @@ position = Vector2( 1054.25, 988.798 )
 rotation = -1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 lock_group = "Office"
+
+[node name="Computer3" parent="Computers" index="2" instance=ExtResource( 13 )]
+
+position = Vector2( 1620, 800 )
+lock_group = "Closet"
 
 [node name="MapLabels" type="Node2D" parent="." index="12"]
 
@@ -442,14 +438,31 @@ _sections_unfolded = [ "Theme" ]
 
 [node name="GUI" parent="." index="13" instance=ExtResource( 15 )]
 
+[node name="Exit" parent="." index="14" instance=ExtResource( 16 )]
+
+margin_left = 377.0
+margin_top = 64.0
+margin_right = 643.0
+margin_bottom = 215.0
+
+[node name="Briefcase" parent="." index="15" instance=ExtResource( 17 )]
+
+position = Vector2( 470, 440 )
+
+[node name="Folder" parent="." index="16" instance=ExtResource( 18 )]
+
+position = Vector2( 460, 380 )
+
 [connection signal="disguising" from="Player" to="GUI" method="_on_Player_disguising"]
-
-[connection signal="timeout" from="Player/VisionModeTimer" to="Player" method="_on_VisionModeTimer_timeout"]
-
-[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
 
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
+
 [connection signal="combination" from="Computers/Computer2" to="LockedDoors/LockedDoor3" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer3" to="LockedDoors/LockedDoor4" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer3" to="LockedDoors/LockedDoor5" method="_on_Computer_combination"]
 
 

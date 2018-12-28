@@ -11,6 +11,7 @@ export var disguise_slowdown = 0.25
 var disguised = false
 var velocity_multiplier = 1
 
+
 signal disguising
 
 func _ready():
@@ -110,4 +111,17 @@ func update_dusguise_display():
 func _on_VisionModeTimer_timeout():
 	vision_change_on_cooldown = false
 
-
+func collect_briefcase():
+	#Zamiast trzymania jakiejs zmiennej to gdy mamy walizke dodajemy pusty node i potem przy wyjsciu sprawdzimy czy Player ma ten node
+	var loot = Node.new()
+	loot.set_name("briefcase") # dodanie noda gdy podniesie sie walizke
+	add_child(loot)
+	get_tree().call_group("Loot", "collect_loot", "briefcase")
+	
+func collect_folder():
+	#Zamiast trzymania jakiejs zmiennej to gdy mamy walizke dodajemy pusty node i potem przy wyjsciu sprawdzimy czy Player ma ten node
+	var loot = Node.new()
+	loot.set_name("folder") # dodanie noda gdy podniesie sie walizke
+	add_child(loot)
+	get_tree().call_group("Loot", "collect_loot", "folder")
+	

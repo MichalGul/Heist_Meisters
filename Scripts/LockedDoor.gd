@@ -30,3 +30,6 @@ func _on_Computer_combination(numbers, lock_group):
 func _on_ExitDetection_body_entered(body):
 	open()
 	
+
+func _on_Computer3_combination():
+	pass # replace with function body
